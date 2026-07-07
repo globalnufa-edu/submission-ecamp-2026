@@ -17,7 +17,9 @@
       <a href="index.html#program">Program</a>
       <span class="hide-mobile"><a href="index.html#tribes">Tribes</a></span>
       <a href="faq.html">FAQ</a>
-      <a href="index.html#register" class="btn small">Register →</a>
+      <a href="https://wa.me/628111198223" class="btn small" target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i> Chat With Us
+</a>
     </div>
   </div>
 </nav>
@@ -37,14 +39,24 @@
   <div class="plane p1" aria-hidden="true">✈️</div>
   <div class="plane p2" aria-hidden="true">✈️</div>
   <div class="plane p3" aria-hidden="true">✈️</div>
+  <div class="sky-layer" aria-hidden="true">
+    <div class="star s1">✦</div>
+    <div class="star s2">✧</div>
+    <div class="star s3">✦</div>
+    <div class="star s4">✧</div>
+    <div class="star s5">✦</div>
+    <div class="balloon b1">🎈</div>
+    <div class="cloud c2">☁️</div>
+    <div class="mountain-row">🏔️ 🏙️ ⛰️ 🏢 🗻</div>
+  </div>
   <div class="stamp">GVC<br>2026<br>BOARDING PASS</div>
   <div class="wrap">
-    <div class="eyebrow">✦ Programme 2026 · Junior High &amp; Senior High</div>
+    <div class="eyebrow">✦ Programme 2026 · Junior High School</div>
     <h1>Global Voice<br><span>Camp</span></h1>
-    <p class="lead">A 4-day, 3-night English immersion camp in the forests of Sentul. Not another grammar class — kids leave actually brave enough to speak up.</p>
+    <p class="lead">A 4-day, 3-night English immersion camp in the forests of Sentul. Not another grammar class, kids leave actually brave enough to speak up.</p>
     <div class="cover-meta">
       <div>📍 Sentul Eco Edu Tourism Forest, Bogor</div>
-      <div>🗓️ Dec 26–28, 2026</div>
+      <div>🗓️ Dec 18–21, 2026</div>
       <div>🎒 150–200 Campers · 6 Tribes</div>
     </div>
     <div style="display:flex; gap:14px; flex-wrap:wrap;">
@@ -54,117 +66,192 @@
   </div>
 </section>
 
-<section class="map-section" id="tribes">
+<section class="tribes-section-dark" id="tribes">
+  <div class="sky-layer" aria-hidden="true">
+    <div class="cloud c1">☁️</div>
+    <div class="cloud c2">☁️</div>
+    <div class="cloud c3">☁️</div>
+    <div class="star s1">✦</div>
+    <div class="star s2">✦</div>
+    <div class="star s3">✧</div>
+    <div class="star s4">✦</div>
+    <div class="star s5">✧</div>
+    <div class="balloon b1">🎈</div>
+    <div class="balloon b2">🎈</div>
+    <div class="flying-plane fp1">✈️</div>
+    <div class="flying-plane fp2">✈️</div>
+    <div class="globe-spin">🌍</div>
+    <div class="mountain-row">🏙️ ⛰️ 🏔️ 🏢 🗻 🏙️</div>
+  </div>
   <div class="wrap">
-    <div class="page-tab" style="text-align:center;">Page 01 — Your Tribe Awaits</div>
-    <h2 style="text-align:center;">Six Cities. One Camp.</h2>
-    <p style="text-align:center; max-width:520px; margin:14px auto 0; color:#5b6178; font-size:15px;">Every camper is sorted into a tribe named after a city on the map. Your tribe becomes your team for every race, pitch, and bonfire.</p>
+    <div class="tribe-head">
+      <div class="tribe-head-text">
+        <h2 class="tribe-heading"><span class="tw">CHOOSE</span><br><span class="tg">YOUR TRIBE</span>
+          <svg class="tribe-underline" viewBox="0 0 260 20" aria-hidden="true"><path d="M4,14 Q40,4 80,12 T160,10 T256,8" stroke="var(--gold)" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+        </h2>
+      </div>
+      <div class="tribe-speech">Different vibe.<br>Same mission: <span>Level up your English.</span></div>
+    </div>
+    <p class="tribe-sub">Every tribe has its own culture, style, and superpower.<br>Pick the one that matches your vibe and start your journey!</p>
 
-    <svg class="map-svg" viewBox="0 0 800 500" id="mapSvg">
-      <!-- routes -->
-      <path class="route" id="route-tokyo" d="M400,250 L400,70"/>
-      <path class="route" id="route-newyork" d="M400,250 L560,160"/>
-      <path class="route" id="route-rio" d="M400,250 L560,340"/>
-      <path class="route" id="route-sydney" d="M400,250 L400,430"/>
-      <path class="route" id="route-cairo" d="M400,250 L240,340"/>
-      <path class="route" id="route-london" d="M400,250 L240,160"/>
+    <!--
+      ================= TRIBE VISUALS =================
+      HOW TO SWAP IN YOUR OWN IMAGES:
+      Replace each src="https://placehold.co/..." below with your real photo path,
+      e.g. src="images/tribes/tokyo.jpg" (drop your 6 tribe visuals into an /images/tribes folder).
+      Recommended: portrait orientation, at least 500x650px, one clear subject per image.
+    -->
+    <div class="tribe-carousel-wrap reveal-up">
+      <button class="tribe-nav prev" id="tribePrev" aria-label="Previous">←</button>
 
-      <!-- little planes flying the routes -->
-      <text class="map-plane"><animateMotion dur="7s" repeatCount="indefinite" path="M400,250 L400,70"/>✈️</text>
-      <text class="map-plane"><animateMotion dur="9s" repeatCount="indefinite" path="M400,250 L560,160"/>✈️</text>
-      <text class="map-plane"><animateMotion dur="8s" repeatCount="indefinite" path="M400,250 L560,340"/>✈️</text>
-      <text class="map-plane"><animateMotion dur="7.5s" repeatCount="indefinite" path="M400,250 L400,430"/>✈️</text>
-      <text class="map-plane"><animateMotion dur="8.5s" repeatCount="indefinite" path="M400,250 L240,340"/>✈️</text>
-      <text class="map-plane"><animateMotion dur="9.5s" repeatCount="indefinite" path="M400,250 L240,160"/>✈️</text>
+      <div class="tribe-carousel" id="tribeCarousel">
+        <div class="tribe-card" data-tribe="Tokyo" data-color="tokyo">
+          <div class="selected-badge">★ SELECTED</div>
+          <div class="tribe-card-photo">
+            <img src="https://placehold.co/500x650/EA4B5C/FFFFFF?text=Tokyo" alt="Tokyo tribe" loading="lazy" decoding="async">
+            <div class="tribe-icon-badge">⛩️</div>
+          </div>
+          <div class="tribe-card-info">
+            <div class="tribe-card-title">TOKYO</div>
+            <div class="tribe-card-desc">Discipline meets creativity. Always leveling up.</div>
+            <div class="tribe-trait-row">
+              <span class="trait-pill">Focused</span>
+              <span class="trait-pill">Innovative</span>
+              <span class="trait-pill">Determined</span>
+            </div>
+          </div>
+        </div>
 
-      <!-- hub -->
-      <circle class="hub" cx="400" cy="250" r="34"/>
-      <text class="hub-label" x="400" y="246">GLOBAL</text>
-      <text class="hub-label" x="400" y="260">VOICE CAMP</text>
+        <div class="tribe-card" data-tribe="Rio" data-color="rio">
+          <div class="selected-badge">★ SELECTED</div>
+          <div class="tribe-card-photo">
+            <img src="https://placehold.co/500x650/D4A94B/0D1B42?text=Rio" alt="Rio tribe" loading="lazy" decoding="async">
+            <div class="tribe-icon-badge">🌴</div>
+          </div>
+          <div class="tribe-card-info">
+            <div class="tribe-card-title">RIO</div>
+            <div class="tribe-card-desc">Passionate, vibrant, and full of life.</div>
+            <div class="tribe-trait-row">
+              <span class="trait-pill">Passionate</span>
+              <span class="trait-pill">Vibrant</span>
+              <span class="trait-pill">Positive</span>
+            </div>
+          </div>
+        </div>
 
-      <!-- TOKYO -->
-      <g class="tribe-node" data-tribe="Tokyo" data-color="var(--tokyo)" data-emoji="🗾" data-tag="Precision &amp; neon dreams">
-        <circle class="hit-area" cx="400" cy="70" r="34" fill="#fff" opacity="0" style="pointer-events:all;"/>
-        <circle class="ping p1" cx="400" cy="70" r="20" stroke="var(--tokyo)"/>
-        <circle class="ping p2" cx="400" cy="70" r="20" stroke="var(--tokyo)"/>
-        <circle class="ping p3" cx="400" cy="70" r="20" stroke="var(--tokyo)"/>
-        <circle class="node-ring" cx="400" cy="70" r="20" stroke="var(--tokyo)"/>
-        <text class="node-emoji" x="400" y="76" text-anchor="middle" font-size="18">🗾</text>
-        <text class="node-label" x="400" y="45" text-anchor="middle">Tokyo</text>
-      </g>
+        <div class="tribe-card" data-tribe="New York" data-color="newyork">
+          <div class="selected-badge">★ SELECTED</div>
+          <div class="tribe-card-photo">
+            <img src="https://placehold.co/500x650/1FAE8E/FFFFFF?text=New+York" alt="New York tribe" loading="lazy" decoding="async">
+            <div class="tribe-icon-badge">🗽</div>
+          </div>
+          <div class="tribe-card-info">
+            <div class="tribe-card-title">NEW YORK</div>
+            <div class="tribe-card-desc">Bold, ambitious, and never sleeps.</div>
+            <div class="tribe-trait-row">
+              <span class="trait-pill">Ambitious</span>
+              <span class="trait-pill">Energetic</span>
+              <span class="trait-pill">Fearless</span>
+            </div>
+          </div>
+        </div>
 
-      <!-- NEW YORK -->
-      <g class="tribe-node" data-tribe="New York" data-color="var(--newyork)" data-emoji="🗽" data-tag="Never sleeps, never stops talking">
-        <circle class="hit-area" cx="560" cy="160" r="34" fill="#fff" opacity="0" style="pointer-events:all;"/>
-        <circle class="ping p1" cx="560" cy="160" r="20" stroke="var(--newyork)"/>
-        <circle class="ping p2" cx="560" cy="160" r="20" stroke="var(--newyork)"/>
-        <circle class="ping p3" cx="560" cy="160" r="20" stroke="var(--newyork)"/>
-        <circle class="node-ring" cx="560" cy="160" r="20" stroke="var(--newyork)"/>
-        <text class="node-emoji" x="560" y="166" text-anchor="middle" font-size="18">🗽</text>
-        <text class="node-label" x="600" y="155" text-anchor="middle">New York</text>
-      </g>
+        <div class="tribe-card" data-tribe="London" data-color="london">
+          <div class="selected-badge">★ SELECTED</div>
+          <div class="tribe-card-photo">
+            <img src="https://placehold.co/500x650/8B5CF6/FFFFFF?text=London" alt="London tribe" loading="lazy" decoding="async">
+            <div class="tribe-icon-badge">👑</div>
+          </div>
+          <div class="tribe-card-info">
+            <div class="tribe-card-title">LONDON</div>
+            <div class="tribe-card-desc">Classic, confident, and always on point.</div>
+            <div class="tribe-trait-row">
+              <span class="trait-pill">Confident</span>
+              <span class="trait-pill">Leadership</span>
+              <span class="trait-pill">Timeless</span>
+            </div>
+          </div>
+        </div>
 
-      <!-- RIO -->
-      <g class="tribe-node" data-tribe="Rio" data-color="var(--rio)" data-emoji="🌴" data-tag="Carnival energy, zero fear">
-        <circle class="hit-area" cx="560" cy="340" r="34" fill="#fff" opacity="0" style="pointer-events:all;"/>
-        <circle class="ping p1" cx="560" cy="340" r="20" stroke="var(--rio)"/>
-        <circle class="ping p2" cx="560" cy="340" r="20" stroke="var(--rio)"/>
-        <circle class="ping p3" cx="560" cy="340" r="20" stroke="var(--rio)"/>
-        <circle class="node-ring" cx="560" cy="340" r="20" stroke="var(--rio)"/>
-        <text class="node-emoji" x="560" y="346" text-anchor="middle" font-size="18">🌴</text>
-        <text class="node-label" x="600" y="365" text-anchor="middle">Rio</text>
-      </g>
+        <div class="tribe-card" data-tribe="Cairo" data-color="cairo">
+          <div class="selected-badge">★ SELECTED</div>
+          <div class="tribe-card-photo">
+            <img src="https://placehold.co/500x650/E8894A/FFFFFF?text=Cairo" alt="Cairo tribe" loading="lazy" decoding="async">
+            <div class="tribe-icon-badge">👁️</div>
+          </div>
+          <div class="tribe-card-info">
+            <div class="tribe-card-title">CAIRO</div>
+            <div class="tribe-card-desc">Wise, mysterious, and full of stories.</div>
+            <div class="tribe-trait-row">
+              <span class="trait-pill">Wise</span>
+              <span class="trait-pill">Cultural</span>
+              <span class="trait-pill">Insightful</span>
+            </div>
+          </div>
+        </div>
 
-      <!-- SYDNEY -->
-      <g class="tribe-node" data-tribe="Sydney" data-color="var(--sydney)" data-emoji="🐨" data-tag="Laid-back but loud">
-        <circle class="hit-area" cx="400" cy="430" r="34" fill="#fff" opacity="0" style="pointer-events:all;"/>
-        <circle class="ping p1" cx="400" cy="430" r="20" stroke="var(--sydney)"/>
-        <circle class="ping p2" cx="400" cy="430" r="20" stroke="var(--sydney)"/>
-        <circle class="ping p3" cx="400" cy="430" r="20" stroke="var(--sydney)"/>
-        <circle class="node-ring" cx="400" cy="430" r="20" stroke="var(--sydney)"/>
-        <text class="node-emoji" x="400" y="436" text-anchor="middle" font-size="18">🐨</text>
-        <text class="node-label" x="400" y="465" text-anchor="middle">Sydney</text>
-      </g>
+        <div class="tribe-card" data-tribe="Sydney" data-color="sydney">
+          <div class="selected-badge">★ SELECTED</div>
+          <div class="tribe-card-photo">
+            <img src="https://placehold.co/500x650/3B82F6/FFFFFF?text=Sydney" alt="Sydney tribe" loading="lazy" decoding="async">
+            <div class="tribe-icon-badge">🌊</div>
+          </div>
+          <div class="tribe-card-info">
+            <div class="tribe-card-title">SYDNEY</div>
+            <div class="tribe-card-desc">Laid-back, friendly, and adventure-ready.</div>
+            <div class="tribe-trait-row">
+              <span class="trait-pill">Friendly</span>
+              <span class="trait-pill">Adventurous</span>
+              <span class="trait-pill">Open-minded</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <!-- CAIRO -->
-      <g class="tribe-node" data-tribe="Cairo" data-color="var(--cairo)" data-emoji="🏺" data-tag="Ancient wisdom, modern voice">
-        <circle class="hit-area" cx="240" cy="340" r="34" fill="#fff" opacity="0" style="pointer-events:all;"/>
-        <circle class="ping p1" cx="240" cy="340" r="20" stroke="var(--cairo)"/>
-        <circle class="ping p2" cx="240" cy="340" r="20" stroke="var(--cairo)"/>
-        <circle class="ping p3" cx="240" cy="340" r="20" stroke="var(--cairo)"/>
-        <circle class="node-ring" cx="240" cy="340" r="20" stroke="var(--cairo)"/>
-        <text class="node-emoji" x="240" y="346" text-anchor="middle" font-size="18">🏺</text>
-        <text class="node-label" x="200" y="365" text-anchor="middle">Cairo</text>
-      </g>
-
-      <!-- LONDON -->
-      <g class="tribe-node" data-tribe="London" data-color="var(--london)" data-emoji="🎡" data-tag="Posh accent optional">
-        <circle class="hit-area" cx="240" cy="160" r="34" fill="#fff" opacity="0" style="pointer-events:all;"/>
-        <circle class="ping p1" cx="240" cy="160" r="20" stroke="var(--london)"/>
-        <circle class="ping p2" cx="240" cy="160" r="20" stroke="var(--london)"/>
-        <circle class="ping p3" cx="240" cy="160" r="20" stroke="var(--london)"/>
-        <circle class="node-ring" cx="240" cy="160" r="20" stroke="var(--london)"/>
-        <text class="node-emoji" x="240" y="166" text-anchor="middle" font-size="18">🎡</text>
-        <text class="node-label" x="196" y="155" text-anchor="middle">London</text>
-      </g>
-    </svg>
-
-    <div class="tribe-tooltip" id="tribeTooltip">
-      <div class="tt-emoji" id="ttEmoji"></div>
-      <div class="tt-name" id="ttName"></div>
-      <div class="tt-tag" id="ttTag"></div>
-      <div class="tt-cta">Click to pick this tribe →</div>
+      <button class="tribe-nav next" id="tribeNext" aria-label="Next">→</button>
     </div>
 
-    <p style="text-align:center; margin-top:8px; font-size:13px; color:#9aa0b4; font-family:'Special Elite',monospace;">↑ hover a city, or click to jump straight to registration</p>
+    <div class="tribe-dots" id="tribeDots"></div>
+    <p class="tribe-hint">👆 Click a tribe to select it</p>
+    <div class="tribe-selected-banner" id="tribeSelectedBanner">
+      <span class="tsb-icon">✅</span>
+      <span>Your tribe: <strong id="tribeSelectedName">—</strong></span>
+      <span class="tsb-note">saved to your registration form</span>
+    </div>
+
+    <div class="tribe-info-bar">
+      <div class="tribe-info-item">
+        <span class="tribe-info-icon">🧭</span>
+        <span><strong>No wrong choice!</strong><br>You can learn from other tribes and grow together along the way.</span>
+      </div>
+      <div class="tribe-info-item">
+        <span class="tribe-info-icon">👥</span>
+        <span>Meet new friends from your tribe</span>
+      </div>
+      <div class="tribe-info-item">
+        <span class="tribe-info-icon">💬</span>
+        <span>Collaborate &amp; practice English together</span>
+      </div>
+      <div class="tribe-info-item">
+        <span class="tribe-info-icon">🏅</span>
+        <span>Unlock badges and rewards</span>
+      </div>
+      <div class="tribe-info-item">
+        <span class="tribe-info-icon">🌍</span>
+        <span>One camp. Many cultures.</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="page-section" id="program">
+  <div class="page-decor pd1" aria-hidden="true">✎</div>
+  <div class="page-decor pd2" aria-hidden="true">✦</div>
+  <div class="page-decor pd3" aria-hidden="true">💬</div>
   <div class="wrap">
     <div class="page-tab">Page 02 — Why Join</div>
-    <h2>Knowing grammar is easy.<br>Opening your mouth is the hard part.</h2>
-    <div class="cards">
+    <h2>Knowing grammar is easy.<br>Starting the conversation is the hard part.</h2>
+    <div class="cards reveal-stagger">
       <div class="card"><div class="num">✦ 01</div><h3>100% English Zone</h3><p>From wake-up to lights-out, every conversation happens in English. No shortcuts, no exceptions.</p></div>
       <div class="card"><div class="num">✦ 02</div><h3>Real Native Speaker Facilitators</h3><p>3 native facilitators plus 3 local mentors, right there with every tribe, every day.</p></div>
       <div class="card"><div class="num">✦ 03</div><h3>The Amazing Linguistic Race</h3><p>6 game stations — not lectures. Running, shouting, negotiating, all in English.</p></div>
@@ -173,15 +260,101 @@
   </div>
 </section>
 
-<section class="schedule">
+<section class="schedule" id="itinerary">
+  <div class="sky-layer" aria-hidden="true">
+    <div class="cloud c1">☁️</div>
+    <div class="cloud c2">☁️</div>
+    <div class="cloud c3">☁️</div>
+    <div class="star s1">✦</div>
+    <div class="star s2">✧</div>
+    <div class="star s3">✦</div>
+    <div class="star s4">✧</div>
+    <div class="star s5">✦</div>
+    <div class="flying-plane fp1">✈️</div>
+    <div class="flying-plane fp2">✈️</div>
+    <div class="mountain-row">⛰️ 🏔️ 🏙️ 🗻 🏢 ⛰️ 🏔️</div>
+  </div>
+  <div class="journey-decor jd1" aria-hidden="true">☁️</div>
+  <div class="journey-decor jd2" aria-hidden="true">✨</div>
+  <div class="journey-decor jd3" aria-hidden="true">✈️</div>
   <div class="wrap">
     <div class="page-tab">Page 03 — The Itinerary</div>
     <h2 style="color:white;">4 Days, 3 Nights</h2>
-    <div class="sched-grid">
-      <div class="sched-day"><div class="d">01</div><div class="t">Arrival, Tribe Formation &amp; Welcome Bonfire</div></div>
-      <div class="sched-day"><div class="d">02</div><div class="t">Amazing Linguistic Race Round 1, Global Marketplace</div></div>
-      <div class="sched-day"><div class="d">03</div><div class="t">Amazing Linguistic Race Round 2, Pitching Prep</div></div>
-      <div class="sched-day"><div class="d">04</div><div class="t">Showcase, Awarding &amp; Grand Closing</div></div>
+    <p class="journey-sub">Tap a stop — or a day below — to explore the trail.</p>
+
+    <div class="adventure-map reveal-up">
+      <svg viewBox="0 0 800 220" class="map-svg-journey" id="journeyMapSvg" aria-hidden="true">
+        <path class="trail-base" d="M70,150 C150,90 200,60 280,60 C370,60 400,170 500,160 C590,150 650,80 720,70"/>
+        <path class="trail-lit" id="trailLit" d="M70,150 C150,90 200,60 280,60 C370,60 400,170 500,160 C590,150 650,80 720,70"/>
+
+        <text class="map-traveler"><animateMotion dur="15s" repeatCount="indefinite" path="M70,150 C150,90 200,60 280,60 C370,60 400,170 500,160 C590,150 650,80 720,70"/>🧭</text>
+
+        <text class="terrain" x="150" y="28" text-anchor="middle">☁️</text>
+        <text class="terrain" x="610" y="28" text-anchor="middle">☁️</text>
+        <text class="terrain small" x="30" y="205" text-anchor="middle">⛰️</text>
+        <text class="terrain small" x="400" y="200" text-anchor="middle">🌲</text>
+        <text class="terrain small" x="775" y="45" text-anchor="middle">⭐</text>
+        <text class="terrain small" x="755" y="115" text-anchor="middle">⭐</text>
+
+        <g class="map-stop active" data-day="1" data-color="coral" transform="translate(70,150)">
+          <circle class="hit-area" r="30" fill="#fff" opacity="0" style="pointer-events:all;"/>
+          <circle class="stop-ping" r="22"/>
+          <circle class="stop-bg" r="22"/>
+          <text class="stop-icon" text-anchor="middle" dy="7">🏕️</text>
+          <text class="stop-label" text-anchor="middle" y="-32">DAY 1</text>
+          <text class="stop-check" text-anchor="middle" y="40">✅</text>
+        </g>
+
+        <g class="map-stop" data-day="2" data-color="teal" transform="translate(280,60)">
+          <circle class="hit-area" r="30" fill="#fff" opacity="0" style="pointer-events:all;"/>
+          <circle class="stop-ping" r="22"/>
+          <circle class="stop-bg" r="22"/>
+          <text class="stop-icon" text-anchor="middle" dy="7">🏁</text>
+          <text class="stop-label" text-anchor="middle" y="-32">DAY 2</text>
+          <text class="stop-check" text-anchor="middle" y="40">✅</text>
+        </g>
+
+        <g class="map-stop" data-day="3" data-color="gold" transform="translate(500,160)">
+          <circle class="hit-area" r="30" fill="#fff" opacity="0" style="pointer-events:all;"/>
+          <circle class="stop-ping" r="22"/>
+          <circle class="stop-bg" r="22"/>
+          <text class="stop-icon" text-anchor="middle" dy="7">📣</text>
+          <text class="stop-label" text-anchor="middle" y="-32">DAY 3</text>
+          <text class="stop-check" text-anchor="middle" y="40">✅</text>
+        </g>
+
+        <g class="map-stop" data-day="4" data-color="sydney" transform="translate(720,70)">
+          <circle class="hit-area" r="30" fill="#fff" opacity="0" style="pointer-events:all;"/>
+          <circle class="stop-ping" r="22"/>
+          <circle class="stop-bg" r="22"/>
+          <text class="stop-icon" text-anchor="middle" dy="7">🏆</text>
+          <text class="stop-label" text-anchor="middle" y="-32">DAY 4</text>
+          <text class="stop-check" text-anchor="middle" y="40">✅</text>
+        </g>
+      </svg>
+    </div>
+    <p class="map-scroll-hint">← swipe to see the whole trail →</p>
+
+    <div class="day-pills" id="dayPills">
+      <button class="day-pill active" data-color="coral" data-index="0">🏕️ Day 1</button>
+      <button class="day-pill" data-color="teal" data-index="1">🏁 Day 2</button>
+      <button class="day-pill" data-color="gold" data-index="2">📣 Day 3</button>
+      <button class="day-pill" data-color="sydney" data-index="3">🏆 Day 4</button>
+    </div>
+
+    <div class="day-detail-panel" id="dayDetailPanel" data-color="coral">
+      <div class="panel-eyebrow">Day 1</div>
+      <div class="panel-tagline">Arrival &amp; Overcoming the Fear</div>
+      <ul class="panel-activities">
+        <li><span class="ic">🪢</span> Tribe Formation &amp; Identity</li>
+        <li><span class="ic">⚡</span> Ice Breaking: Rapid Fire</li>
+        <li><span class="ic">🔥</span> Welcome Bonfire Night</li>
+      </ul>
+      <div class="panel-nav">
+        <button class="panel-nav-btn" id="prevDayBtn" disabled>← Prev</button>
+        <span class="panel-progress" id="dayProgress">Day 1 of 4</span>
+        <button class="panel-nav-btn" id="nextDayBtn">Next Day →</button>
+      </div>
     </div>
   </div>
 </section>
@@ -198,12 +371,14 @@
   Clicking the card opens the video in a popup instead of playing inline.
 -->
 <section class="gallery-section" id="gallery">
+  <div class="page-decor pd1" aria-hidden="true">📸</div>
+  <div class="page-decor pd2" aria-hidden="true">✨</div>
   <div class="wrap">
     <div class="page-tab" style="text-align:center;">Page 04 — Field Notes</div>
     <h2 style="text-align:center;">Moments From Past Camps</h2>
     <p style="text-align:center; max-width:520px; margin:14px auto 0; color:#5b6178; font-size:15px;">A few snapshots (and one highlight reel) from campers who already made the trip.</p>
 
-    <div class="gallery-grid">
+    <div class="gallery-grid reveal-up">
       <div class="video-card" id="videoCard" data-video="https://youtu.be/-oFG7PCuo1c?si=8SYrUJQCWQvS4Tf2">
         <div class="play-badge">
           <div class="circle">▶</div>
@@ -212,27 +387,27 @@
       </div>
 
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="images/bonfire-ecamp.jpeg" alt="Tribe bonfire night">
+        <img src="images/bonfire-ecamp.jpeg" alt="Tribe bonfire night" loading="lazy" decoding="async">
         <div class="cap"><span>Night 1</span><span class="loc">Bonfire</span></div>
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="images/ecamp-4.JPG" alt="Amazing Linguistic Race">
+        <img src="images/ecamp-4.JPG" alt="Amazing Linguistic Race" loading="lazy" decoding="async">
         <div class="cap"><span>Day 2</span><span class="loc">Linguistic Race</span></div>
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="images/ecamp-1.JPG" alt="Global Marketplace">
+        <img src="images/ecamp-1.JPG" alt="Global Marketplace" loading="lazy" decoding="async">
         <div class="cap"><span>Day 2</span><span class="loc">Marketplace</span></div>
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="images/ecamp-2.JPG" alt="Showcase day performance">
+        <img src="images/ecamp-2.JPG" alt="Showcase day performance" loading="lazy" decoding="async">
         <div class="cap"><span>Day 4</span><span class="loc">Showcase</span></div>
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="images/ecamp-3.JPG" alt="Tribe chant practice">
+        <img src="images/ecamp-3.JPG" alt="Tribe chant practice" loading="lazy" decoding="async">
         <div class="cap"><span>Day 1</span><span class="loc">Tribe Chant</span></div>
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="images/ecamp-5.JPG" alt="Awarding and closing ceremony">
+        <img src="images/ecamp-5.JPG" alt="Awarding and closing ceremony" loading="lazy" decoding="async">
         <div class="cap"><span>Day 4</span><span class="loc">Awarding</span></div>
       </div>
     </div>
@@ -252,6 +427,8 @@
 </div>
 
 <section class="price-section">
+  <div class="page-decor pd1" aria-hidden="true">🎟️</div>
+  <div class="page-decor pd2" aria-hidden="true">⭐</div>
   <div class="wrap">
     <div class="page-tab" style="text-align:center;">Page 05 — The Investment</div>
     <h2>Only 150 Seats Available</h2>
@@ -261,7 +438,7 @@
       <div class="box"><div class="n" id="cd-mins">--</div><div class="l">Mins</div></div>
       <div class="box"><div class="n" id="cd-secs">--</div><div class="l">Secs</div></div>
     </div>
-    <div class="price-cards">
+    <div class="price-cards reveal-stagger">
       <div class="price-card active">
         <div class="tag">⭐ Early Bird</div>
         <div class="amt">Rp 2,750,000</div>
@@ -279,11 +456,13 @@
 </section>
 
 <section class="form-section" id="register">
+  <div class="page-decor pd1" aria-hidden="true">✈️</div>
+  <div class="page-decor pd2" aria-hidden="true">🧭</div>
   <div class="wrap">
     <div class="page-tab" style="text-align:center;">Page 06 — Fill Your Passport</div>
     <h2 style="text-align:center; margin-bottom:36px;">Registration Form</h2>
 
-    <div class="passport-box">
+    <div class="passport-box reveal-up">
       <div class="passport-inner">
 
         <form id="regForm">
@@ -291,65 +470,125 @@
             <div class="dot active" data-dot="1"></div>
             <div class="dot" data-dot="2"></div>
             <div class="dot" data-dot="3"></div>
+            <div class="dot" data-dot="4"></div>
           </div>
 
+          <!-- STEP 1 — Data Diri Peserta -->
           <div class="form-step visible" data-step="1">
-            <div class="step-label">Camper Details</div>
-            <div class="field"><label>Full Name</label><input type="text" id="fullName" required></div>
+            <div class="step-label">Data Diri Peserta</div>
+            <div class="field"><label>Nama Lengkap</label><input type="text" id="fullName" required></div>
             <div class="row2">
-              <div class="field"><label>School</label><input type="text" id="school" required></div>
-              <div class="field"><label>Grade</label><input type="text" id="grade" placeholder="e.g. Grade 8" required></div>
+              <div class="field"><label>Tanggal Lahir</label><input type="date" id="dob" required></div>
+              <div class="field"><label>Jenis Kelamin</label>
+                <select id="gender" required>
+                  <option value="">Pilih</option>
+                  <option>Laki-laki</option>
+                  <option>Perempuan</option>
+                </select>
+              </div>
             </div>
             <div class="row2">
-              <div class="field"><label>Age</label><input type="number" id="age" min="10" max="18" required></div>
-              <div class="field"><label>Gender</label>
-                <select id="gender" required>
-                  <option value="">Choose</option>
-                  <option>Male</option>
-                  <option>Female</option>
+              <div class="field"><label>Golongan Darah</label>
+                <select id="bloodType" required>
+                  <option value="">Pilih</option>
+                  <option>A</option>
+                  <option>B</option>
+                  <option>AB</option>
+                  <option>O</option>
+                  <option>Tidak Tahu</option>
                 </select>
+              </div>
+              <div class="field"><label>Kelas</label><input type="text" id="grade" placeholder="cth. 8 SMP" required></div>
+            </div>
+            <div class="field"><label>Nama Sekolah</label><input type="text" id="school" required></div>
+            <div class="field" style="margin-top:16px;">
+              <label>Pilih Tribe Favorit (opsional)</label>
+              <div class="tribe-pick">
+                <label id="pick-Tokyo"><input type="radio" name="tribe" value="Tokyo"><span>🗾 Tokyo</span></label>
+                <label id="pick-Rio"><input type="radio" name="tribe" value="Rio"><span>🌴 Rio</span></label>
+                <label id="pick-New York"><input type="radio" name="tribe" value="New York"><span>🗽 New York</span></label>
+                <label id="pick-London"><input type="radio" name="tribe" value="London"><span>🎡 London</span></label>
+                <label id="pick-Cairo"><input type="radio" name="tribe" value="Cairo"><span>🏺 Cairo</span></label>
+                <label id="pick-Sydney"><input type="radio" name="tribe" value="Sydney"><span>🐨 Sydney</span></label>
               </div>
             </div>
             <div class="form-nav">
               <span></span>
-              <button type="button" class="btn small" onclick="nextStep(1)">Next →</button>
+              <button type="button" class="btn small" onclick="nextStep(1)">Lanjut →</button>
             </div>
           </div>
 
+          <!-- STEP 2 — Alamat & Kontak -->
           <div class="form-step" data-step="2">
-            <div class="step-label">Parent / Guardian Contact</div>
-            <div class="field"><label>Parent / Guardian Name</label><input type="text" id="parentName" required></div>
+            <div class="step-label">Alamat &amp; Kontak</div>
             <div class="row2">
-              <div class="field"><label>Active WhatsApp Number</label><input type="tel" id="parentPhone" placeholder="08xx..." required></div>
-              <div class="field"><label>Email</label><input type="email" id="parentEmail" required></div>
+              <div class="field"><label>Kota / Kabupaten</label><input type="text" id="city" required></div>
+              <div class="field"><label>Kecamatan</label><input type="text" id="district" required></div>
             </div>
-            <div class="field"><label>Health Notes / Allergies (optional)</label><textarea id="medical" rows="2" placeholder="Leave blank if none"></textarea></div>
+            <div class="field"><label>Alamat Lengkap</label><textarea id="address" rows="2" placeholder="Jalan, no. rumah, RT/RW, dll" required></textarea></div>
+            <div class="field"><label>No. HP Peserta</label><input type="tel" id="camperPhone" placeholder="08xx..." required></div>
+            <div class="row2">
+              <div class="field"><label>Nama Orang Tua / Wali</label><input type="text" id="parentName" required></div>
+              <div class="field"><label>No. HP Orang Tua / Wali</label><input type="tel" id="parentPhone" placeholder="08xx..." required></div>
+            </div>
+            <div class="field"><label>Email Orang Tua / Wali (opsional)</label><input type="email" id="parentEmail"></div>
             <div class="form-nav">
-              <button type="button" class="btn small outline" onclick="prevStep(2)">← Back</button>
-              <button type="button" class="btn small" onclick="nextStep(2)">Next →</button>
+              <button type="button" class="btn small outline" onclick="prevStep(2)">← Kembali</button>
+              <button type="button" class="btn small" onclick="nextStep(2)">Lanjut →</button>
             </div>
           </div>
 
+          <!-- STEP 3 — Kesehatan & Info Tambahan -->
           <div class="form-step" data-step="3">
-            <div class="step-label">Pick Your Dream Tribe (optional)</div>
-            <div class="tribe-pick">
-              <label id="pick-Tokyo"><input type="radio" name="tribe" value="Tokyo"><span>🗾 Tokyo</span></label>
-              <label id="pick-Rio"><input type="radio" name="tribe" value="Rio"><span>🌴 Rio</span></label>
-              <label id="pick-New York"><input type="radio" name="tribe" value="New York"><span>🗽 New York</span></label>
-              <label id="pick-London"><input type="radio" name="tribe" value="London"><span>🎡 London</span></label>
-              <label id="pick-Cairo"><input type="radio" name="tribe" value="Cairo"><span>🏺 Cairo</span></label>
-              <label id="pick-Sydney"><input type="radio" name="tribe" value="Sydney"><span>🐨 Sydney</span></label>
+            <div class="step-label">Kesehatan &amp; Info Tambahan</div>
+            <div class="field"><label>Catatan Kesehatan / Alergi (opsional)</label><textarea id="medical" rows="2" placeholder="Kosongkan jika tidak ada"></textarea></div>
+            <div class="row2">
+              <div class="field"><label>Ukuran Kaos</label>
+                <select id="shirtSize" required>
+                  <option value="">Pilih</option>
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                  <option>XL</option>
+                  <option>XXL</option>
+                </select>
+              </div>
+              <div class="field"><label>Dari mana tau Global Voice Camp?</label>
+                <select id="infoSource" required>
+                  <option value="">Pilih</option>
+                  <option>Instagram</option>
+                  <option>Sekolah</option>
+                  <option>Teman / Saudara</option>
+                  <option>Website</option>
+                  <option>Lainnya</option>
+                </select>
+              </div>
             </div>
-            <div class="field" style="margin-top:20px;">
+            <div class="form-nav">
+              <button type="button" class="btn small outline" onclick="prevStep(3)">← Kembali</button>
+              <button type="button" class="btn small" onclick="nextStep(3)">Lanjut →</button>
+            </div>
+          </div>
+
+          <!-- STEP 4 — Persetujuan -->
+          <div class="form-step" data-step="4">
+            <div class="step-label">Persetujuan</div>
+            <div class="field" style="margin-top:4px;">
               <label style="display:flex; gap:8px; align-items:flex-start; font-weight:500;">
                 <input type="checkbox" id="pledge" required style="width:auto; margin-top:3px;">
-                My parent/guardian and I understand this camp is a 100% English zone, and we agree to the registration terms.
+                Saya dan orang tua/wali memahami bahwa camp ini adalah lingkungan 100% Bahasa Inggris dan menyetujui ketentuan pendaftaran.
               </label>
             </div>
-            <div class="error-msg" id="errMsg">Something's missing — check the fields above.</div>
+            <div class="field">
+              <label style="display:flex; gap:8px; align-items:flex-start; font-weight:500;">
+                <input type="checkbox" id="photoConsent" required style="width:auto; margin-top:3px;">
+                Saya menyetujui anak saya untuk difoto/direkam sebagai dokumentasi resmi Global Voice Camp.
+              </label>
+            </div>
+            <div class="error-msg" id="errMsg">Ada data yang belum lengkap. Cek lagi ya.</div>
             <div class="form-nav">
-              <button type="button" class="btn small outline" onclick="prevStep(3)">← Back</button>
-              <button type="submit" class="btn small" id="submitBtn">Submit Registration ✓</button>
+              <button type="button" class="btn small outline" onclick="prevStep(4)">← Kembali</button>
+              <button type="submit" class="btn small" id="submitBtn">Kirim Pendaftaran ✓</button>
             </div>
           </div>
         </form>
@@ -368,7 +607,7 @@
 <footer>
   <div class="wrap">
     <p><strong>Global Voice Camp 2026</strong> — English Immersion Experience</p>
-    <p>Organized by Nuufa Global Education</p>
+    <p>Organized by NUFA Global Education</p>
   </div>
 </footer>
 
