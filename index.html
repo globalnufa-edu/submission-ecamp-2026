@@ -12,7 +12,7 @@
 
 <nav class="site-nav">
   <div class="wrap">
-    <a href="index.html" class="brand"><span class="flag">🌍</span> Global Voice Camp</a>
+    <a href="index.html" class="brand"><img src="images/nufa.png" alt="NUFA Global Education" class="brand-logo"> NUFA Global Education</a>
     <div class="links">
       <a href="index.html#program">Program</a>
       <span class="hide-mobile"><a href="index.html#tribes">Tribes</a></span>
@@ -192,8 +192,10 @@
   Just replace the src="https://placehold.co/..." on each <img> with your own image path,
   e.g. src="images/gvc-2025-day1.jpg" (upload your photos into an /images folder in your repo).
   Update the "cap" location + day text to match each real photo.
-  For the video: replace REPLACE_WITH_YOUTUBE_ID below with your actual YouTube video ID
-  (the part after "v=" in a YouTube URL).
+  For the video: replace REPLACE_WITH_YOUTUBE_URL below with your actual YouTube link
+  (any format works — youtube.com/watch?v=..., youtu.be/..., or a Shorts link).
+  The thumbnail preview is pulled automatically from YouTube — no extra image needed.
+  Clicking the card opens the video in a popup instead of playing inline.
 -->
 <section class="gallery-section" id="gallery">
   <div class="wrap">
@@ -202,36 +204,35 @@
     <p style="text-align:center; max-width:520px; margin:14px auto 0; color:#5b6178; font-size:15px;">A few snapshots (and one highlight reel) from campers who already made the trip.</p>
 
     <div class="gallery-grid">
-      <div class="video-card" id="videoCard" data-video="REPLACE_WITH_YOUTUBE_ID">
+      <div class="video-card" id="videoCard" data-video="https://youtu.be/-oFG7PCuo1c?si=8SYrUJQCWQvS4Tf2">
         <div class="play-badge">
           <div class="circle">▶</div>
           <div class="lbl">Watch the Highlight Reel</div>
         </div>
-        <iframe id="videoFrame" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
 
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="https://placehold.co/400x300/0D1B42/F6F1E4?text=Tribe+Bonfire" alt="Tribe bonfire night">
+        <img src="images/bonfire-ecamp.jpeg" alt="Tribe bonfire night">
         <div class="cap"><span>Night 1</span><span class="loc">Bonfire</span></div>
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="https://placehold.co/400x300/EA4B5C/F6F1E4?text=Linguistic+Race" alt="Amazing Linguistic Race">
+        <img src="images/ecamp-4.JPG" alt="Amazing Linguistic Race">
         <div class="cap"><span>Day 2</span><span class="loc">Linguistic Race</span></div>
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="https://placehold.co/400x300/1FAE8E/F6F1E4?text=Global+Marketplace" alt="Global Marketplace">
+        <img src="images/ecamp-1.JPG" alt="Global Marketplace">
         <div class="cap"><span>Day 2</span><span class="loc">Marketplace</span></div>
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="https://placehold.co/400x300/D4A94B/0D1B42?text=Showcase+Day" alt="Showcase day performance">
+        <img src="images/ecamp-2.JPG" alt="Showcase day performance">
         <div class="cap"><span>Day 4</span><span class="loc">Showcase</span></div>
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="https://placehold.co/400x300/16265E/F6F1E4?text=Tribe+Chant" alt="Tribe chant practice">
+        <img src="images/ecamp-3.JPG" alt="Tribe chant practice">
         <div class="cap"><span>Day 1</span><span class="loc">Tribe Chant</span></div>
       </div>
       <div class="photo-card" onclick="openLightbox(this)">
-        <img src="https://placehold.co/400x300/EA4B5C/F6F1E4?text=Awarding+Night" alt="Awarding and closing ceremony">
+        <img src="images/ecamp-5.JPG" alt="Awarding and closing ceremony">
         <div class="cap"><span>Day 4</span><span class="loc">Awarding</span></div>
       </div>
     </div>
@@ -241,6 +242,13 @@
 <div class="lightbox" id="lightbox">
   <button class="close" onclick="closeLightbox()">&times;</button>
   <img id="lightboxImg" src="" alt="">
+</div>
+
+<div class="video-modal" id="videoModal">
+  <button class="close" onclick="closeVideoModal()">&times;</button>
+  <div class="video-modal-inner">
+    <iframe id="modalVideoFrame" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
 </div>
 
 <section class="price-section">
