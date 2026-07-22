@@ -3,26 +3,27 @@ const CONFIG = {
 
   // OPTION A: send data straight into a Google Form's responses
   // (leave formActionUrl empty to skip this and use Apps Script below instead)
-  formActionUrl: "", // e.g. "https://docs.google.com/forms/d/e/1FAIpQLS.../formResponse"
+  formActionUrl: "https://docs.google.com/forms/d/e/1FAIpQLScsDeMTlTIlLkcC-mwaQyP_pE-LVXUKdBfePpjbePLEmyO4Fg/formResponse",
   formEntryMap: {
-    fullName: "entry.PASTE_ID_HERE",
-    dob: "entry.PASTE_ID_HERE",
-    gender: "entry.PASTE_ID_HERE",
-    bloodType: "entry.PASTE_ID_HERE",
-    school: "entry.PASTE_ID_HERE",
-    grade: "entry.PASTE_ID_HERE",
-    city: "entry.PASTE_ID_HERE",
-    district: "entry.PASTE_ID_HERE",
-    address: "entry.PASTE_ID_HERE",
-    camperPhone: "entry.PASTE_ID_HERE",
-    parentName: "entry.PASTE_ID_HERE",
-    parentPhone: "entry.PASTE_ID_HERE",
-    parentEmail: "entry.PASTE_ID_HERE",
-    medical: "entry.PASTE_ID_HERE",
-    shirtSize: "entry.PASTE_ID_HERE",
-    infoSource: "entry.PASTE_ID_HERE",
-    tribePref: "entry.PASTE_ID_HERE",
-    photoConsent: "entry.PASTE_ID_HERE",
+    fullName: "entry.1738669770",
+    dob: "entry.530000845",
+    gender: "entry.1847977819",
+    bloodType: "entry.525813650",
+    school: "entry.1679764375",
+    grade: "entry.812126032",
+    city: "entry.1496150981",
+    district: "entry.380967950",
+    address: "entry.985618435",
+    camperPhone: "entry.1447087592",
+    parentName: "entry.1270228733",
+    parentPhone: "entry.1886506612",
+    parentEmail: "entry.390994157",
+    medical: "entry.956631490",
+    shirtSize: "entry.1232325050",
+    infoSource: "entry.1946364769",
+    tribePref: "entry.335555047",
+    pledge: "entry.1997510297",
+    photoConsent: "entry.226083117",
   },
 
   // OPTION B: send data to a Google Apps Script Web App that writes to a Sheet
@@ -414,6 +415,7 @@ document
       tribePref:
         (document.querySelector('input[name="tribe"]:checked') || {}).value ||
         "-",
+      pledge: document.getElementById("pledge").checked,
       photoConsent: document.getElementById("photoConsent").checked,
       submittedAt: new Date().toISOString(),
     };
@@ -427,9 +429,33 @@ document
         // OPTION A: submit straight into a Google Form's responses.
         // Google Forms blocks reading the response (no-cors), so we can't
         // confirm success/failure here — we just fire it and trust it landed.
+        // Google Forms needs a couple of fields translated into its own
+        // expected format: a native Date question wants 3 separate params
+        // (not one YYYY-MM-DD string), checkbox questions want their
+        // option label ("Setuju") instead of a JS boolean, and the gender
+        // options in the Form are capitalized differently ("Laki-Laki")
+        // than the ones shown on this page ("Laki-laki").
+        const genderMap = { "Laki-laki": "Laki-Laki" };
+
         const params = new URLSearchParams();
         Object.keys(CONFIG.formEntryMap).forEach((key) => {
-          params.append(CONFIG.formEntryMap[key], payload[key] ?? "");
+          const entryId = CONFIG.formEntryMap[key];
+          if (key === "dob" && payload.dob) {
+            const [year, month, day] = payload.dob.split("-");
+            params.append(`${entryId}_year`, year);
+            params.append(`${entryId}_month`, month);
+            params.append(`${entryId}_day`, day);
+            return;
+          }
+          if (key === "pledge" || key === "photoConsent") {
+            params.append(entryId, payload[key] ? "Setuju" : "");
+            return;
+          }
+          if (key === "gender") {
+            params.append(entryId, genderMap[payload.gender] || payload.gender);
+            return;
+          }
+          params.append(entryId, payload[key] ?? "");
         });
         await fetch(CONFIG.formActionUrl, {
           method: "POST",

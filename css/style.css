@@ -253,6 +253,34 @@
     100%{transform:translate(115vw,30px) rotate(-4deg); opacity:0;}
   }
 
+  /* ---------- HERO PASSPORT VISUAL ---------- */
+  .cover-grid{
+    display:grid; grid-template-columns:1.15fr 0.85fr; align-items:center; gap:32px;
+  }
+  .cover-passport{
+    display:flex; justify-content:center; align-items:center;
+    perspective:1000px;
+  }
+  .passport-float{
+    width:min(100%, 140px); height:auto; border-radius:8px;
+    box-shadow:0 16px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(212,169,75,0.15);
+    animation:passportFloat 6s ease-in-out infinite;
+    will-change:transform;
+  }
+  @keyframes passportFloat{
+    0%,100%{transform:translateY(0) rotate(-4deg);}
+    50%{transform:translateY(-12px) rotate(-1deg);}
+  }
+  @media(max-width:900px){
+    .cover-grid{grid-template-columns:1fr 72px; align-items:start; gap:10px;}
+    .cover-passport{justify-content:flex-end; padding-top:2px;}
+    .passport-float{width:100%; max-width:72px; border-radius:6px;}
+    @keyframes passportFloat{
+      0%,100%{transform:translateY(0) rotate(-3deg);}
+      50%{transform:translateY(-7px) rotate(-1deg);}
+    }
+  }
+
   .page-section{padding:80px 0; position:relative; overflow:hidden;}
   .page-section::before{
     content:""; position:absolute; inset:-25%; pointer-events:none; opacity:.85; z-index:0;
@@ -862,6 +890,11 @@
   .row2{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
   @media(max-width:520px){.row2{grid-template-columns:1fr;}}
   .form-nav{display:flex; justify-content:space-between; margin-top:28px; gap:12px;}
+  .form-nav .btn{white-space:nowrap;}
+  @media(max-width:480px){
+    .form-nav{gap:8px;}
+    .form-nav .btn{flex:1; padding:12px 10px; gap:6px; font-size:13.5px;}
+  }
   .btn.small{padding:12px 22px; font-size:14.5px;}
   .btn.outline{background:transparent; color:var(--ink); border:1.5px solid var(--paper-line); box-shadow:none;}
   .btn.outline:hover{
@@ -916,6 +949,7 @@
     .plane.p3{display:none;}
     .plane{font-size:16px; opacity:.35;}
     .cover-meta{gap:12px 18px; font-size:13px;}
+    .eyebrow{border-radius:14px; text-align:center;}
   }
   @media (max-width:480px){
     .stamp{display:none;}
@@ -937,6 +971,7 @@
 }
 .site-nav .wrap{
   display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; row-gap:10px;
   padding:14px 24px; max-width:1080px;
 }
 .site-nav .brand{
@@ -960,6 +995,14 @@
 @media (max-width:640px){
   .site-nav .links{gap:14px;}
   .site-nav .links span.hide-mobile{display:none;}
+}
+@media (max-width:480px){
+  .site-nav .wrap{padding:12px 16px;}
+  .site-nav .brand{font-size:13px; gap:6px;}
+  .site-nav .brand-logo{height:20px;}
+  .site-nav .links{gap:10px;}
+  .site-nav .links a:not(.btn){font-size:13px;}
+  .site-nav .links .btn{padding:8px 12px; font-size:12.5px;}
 }
 /* ---------- SCROLL REVEAL (whole page, performant) ---------- */
 .reveal-up{
