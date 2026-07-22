@@ -14,7 +14,7 @@ const FAQS = [
   { cat:'checkin', icon:'✈️', q:"What's included in the price?",
     a:"3-night stay at Sentul Eco Edu Tourism Forest, all meals, 6 facilitators (3 native speakers + 3 local mentors), a camp kit, an official certificate, and full video documentation." },
   { cat:'checkin', icon:'✈️', q:"What's the difference between Early Bird and Normal price?",
-    a:"Early Bird (Rp 2,750,000) is available until the countdown on our homepage hits zero — after that, registrations move to Normal price (Rp 2,950,000). Same camp, same everything, just a different deadline." },
+    a:"Early Bird (Rp 3,150,000) is available until the countdown on our homepage hits zero — after that, registrations move to Normal price (Rp 3,750,000). Same camp, same everything, just a different deadline." },
   { cat:'checkin', icon:'✈️', q:"Is there a discount for siblings or groups from the same school?",
     a:"We're finalizing group rates for schools sending 10+ campers together — message our team directly and we'll work out a package." },
   { cat:'checkin', icon:'✈️', q:"What age or grade levels can join?",

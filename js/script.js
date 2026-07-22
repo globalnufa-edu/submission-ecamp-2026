@@ -546,6 +546,7 @@ document
 
   if (!mapStops.length || !panel) return; // itinerary map not on this page
 
+  let currentDay = 0;
   let trailLength = 0;
 
   // measure the real curve length so we can "light it up" proportionally
@@ -579,15 +580,16 @@ document
         <button class="panel-nav-btn" id="nextDayBtn" ${index === DAYS.length - 1 ? "disabled" : ""}>${index === DAYS.length - 1 ? "🎉 Journey Complete" : "Next Day →"}</button>
       </div>
     `;
-
-    // re-bind nav buttons since innerHTML wipes old listeners
-    document
-      .getElementById("prevDayBtn")
-      .addEventListener("click", () => goToDay(index - 1));
-    document
-      .getElementById("nextDayBtn")
-      .addEventListener("click", () => goToDay(index + 1));
   }
+
+  // delegated listener: works for the buttons in the original static HTML
+  // (before any goToDay() call has run renderPanel yet) as well as every
+  // re-rendered copy afterwards, since innerHTML wipes any listener bound
+  // directly to the old button nodes.
+  panel.addEventListener("click", (e) => {
+    if (e.target.closest("#prevDayBtn")) goToDay(currentDay - 1);
+    else if (e.target.closest("#nextDayBtn")) goToDay(currentDay + 1);
+  });
 
   function setActiveStop(index) {
     mapStops.forEach((stop, i) => {
@@ -630,6 +632,7 @@ document
 
   function goToDay(index) {
     if (index < 0 || index >= DAYS.length) return;
+    currentDay = index;
     setActiveStop(index);
     setActivePill(index);
     updateTrailLight(index);

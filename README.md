@@ -69,7 +69,7 @@ In `index.html`, find the `<!-- GALLERY / FIELD NOTES -->` section:
 ## 4. Adjust dates & pricing
 
 - Early bird countdown target: `CONFIG.earlyBirdDeadline` in `js/script.js`
-- Camp dates and pricing: search `index.html` for "Dec 26–28, 2026" and "Rp 2,750,000" / "Rp 2,950,000"
+- Camp dates and pricing: search `index.html` for "Dec 18–21, 2026" and "Rp 3,150,000" / "Rp 3,750,000"
 
 ## 5. Before going live
 
